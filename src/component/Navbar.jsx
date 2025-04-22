@@ -801,12 +801,13 @@
 
 
 
+
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/easy-withdraw-logo.png";
 import { User, LogOut, Menu, X } from "lucide-react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { toast, ToastContainer } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const menuItems = [
   { name: "CashApp", path: "/cash-app" },
@@ -852,8 +853,10 @@ const Navbar = () => {
     };
   }, []);
 
+
   const handleLogout = () => {
     const userMenu = document.getElementById("userMenu");
+    // toast.success("Logged out successfully");
     if (userMenu) {
       userMenu.classList.add("animate-fadeOut");
       setTimeout(() => {
@@ -861,7 +864,6 @@ const Navbar = () => {
         localStorage.removeItem("userData");
         setUser(null);
         setDropdownOpen(false);
-        toast.success("Logged out successfully");
         navigate("/");
         window.dispatchEvent(new Event("authStateChanged")); // <- make sure logout also updates navbar
       }, 300);
@@ -869,7 +871,6 @@ const Navbar = () => {
       localStorage.removeItem("token");
       localStorage.removeItem("userData");
       setUser(null);
-      toast.success("Logged out successfully");
       navigate("/");
       window.dispatchEvent(new Event("authStateChanged")); // fallback logout
     }
@@ -904,6 +905,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-b from-[#550665] to-[#27012F] opacity-95 text-white px-4 sm:px-6 md:px-8 lg:px-12 py-4 md:py-6 lg:py-8 flex items-center justify-between shadow-md w-full">
       {/* Left: Logo + Toggle */}
+
       <div className="flex items-center justify-between w-full md:w-auto">
         <Link to="/">
           <img
@@ -1033,10 +1035,21 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
-      <ToastContainer position="top-right" autoClose={3000} theme="dark" />
+{/* 
+      <ToastContainer 
+        position="top-right" 
+        autoClose={3000} 
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick={true}
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={true}
+        pauseOnHover={true}
+        theme="colored"
+        closeButton={true}
+      /> */}
     </nav>
   );
 };
-
 export default Navbar;

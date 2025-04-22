@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import RobinhoodCardSection from '../Robinhood/components/RobinhoodCardSection'
 import RobinhoodLanding from '../Robinhood/components/RobinhoodLanding'
 import FAQAccordion from '../Robinhood/components/FAQAccordion'
+import CallToAction from '@/pages/cashApp/components/CallToAction'
 
 
 const Robinhood = () => {
@@ -78,6 +79,7 @@ const Robinhood = () => {
 
 
         <FAQAccordion />
+        <CallToAction/>
     </div>
   )
 }

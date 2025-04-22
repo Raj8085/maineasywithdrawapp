@@ -112,7 +112,7 @@
 
 
 
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import phoneImage from "../../../assets/cash-app-hero-phone.png";
 import cardImage from "../../../assets/cash-app-hero-card.png";
 import ScrollDOwn from "../../../assets/scroll-down.gif";

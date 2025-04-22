@@ -17,6 +17,7 @@ import TawkToChat from "./component/TawkToChat"
 import CreditScoreChecker from "./pages/Home/component/Features/CreditCardScoreChecker"
 import Login from "./LoginAndSignup/pages/login"
 import Signup from "./LoginAndSignup/pages/register"
+import ScrollToTop from "./component/ScrollToTop"
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       {/* <Navbar />
       <CashApp />
       <Footer /> */}
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
