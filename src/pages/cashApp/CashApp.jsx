@@ -1,4 +1,4 @@
-import Hero from './components/hero'
+import Hero from './components/Hero'
 import Video from '../../assets/cash-app-video.mp4'
 import Mobile from '../../assets/cash-app-mobile.png'
 import Card1 from '../../assets/cash-app-card1.png'
